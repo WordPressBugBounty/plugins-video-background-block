@@ -3,7 +3,7 @@ Contributors: bplugins, abuhayat, charlescormier
 Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, video background, background, background video, Gutenberg block
 Requires at least: 6.2+
-Tested up to: 6.6.2
+Tested up to: 6.7
 Stable tag: 1.0.3
 Requires PHP: 7.1
 License: GPLv3 or later
@@ -109,22 +109,6 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 
 == Changelog ==
-
-= 1.0.3 =
-* Fix not playing the video on mobile
-
-= 1.0.2 =
-* Fallback Image
-* Not load scripts if block is not used
-
-= 1.0.1 =
-* Add translate feature
-
-= 1.0.0 =
-* Initial Release
-
-
-== Upgrade Notice ==
 
 = 1.0.3 =
 * Fix not playing the video on mobile
