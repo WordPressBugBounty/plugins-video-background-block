@@ -3,7 +3,7 @@ Contributors: bplugins, abuhayat, charlescormier
 Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, video background, background, background video, Gutenberg block
 Requires at least: 6.2+
-Tested up to: 6.7
+Tested up to: 6.7.1
 Stable tag: 1.0.3
 Requires PHP: 7.1
 License: GPLv3 or later
