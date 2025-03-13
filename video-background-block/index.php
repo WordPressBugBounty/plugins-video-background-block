@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Video Background Block
  * Description: Use video as background in section.
- * Version: 1.0.3
+ * Version: 1.0.4
  * Author: bPlugins
  * Author URI: https://bplugins.com
  * License: GPLv3
@@ -18,4 +18,15 @@ define( 'VBB_VERSION', isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVE
 define( 'VBB_DIR_URL', plugin_dir_url( __FILE__ ) );
 define( 'VBB_DIR_PATH', plugin_dir_path( __FILE__ ) );
 
-require_once VBB_DIR_PATH . 'inc/block.php';
+if( !class_exists( 'VBBPlugin' ) ){
+    class VBBPlugin{
+        public function __construct(){
+			add_action( 'init', [$this, 'onInit'] );
+		}
+
+        function onInit(){
+			register_block_type( __DIR__ . '/build' );
+		}
+    }
+    new VBBPlugin;
+}

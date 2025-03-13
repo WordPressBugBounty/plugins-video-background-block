@@ -1,0 +1,82 @@
+{
+  "apiVersion": 2,
+  "name": "vbb/video-bg",
+  "title": "Video Background",
+  "description": "Use video as background in section.",
+  "category": "widgets",
+  "keywords": [
+    "video background",
+    "background",
+    "video"
+  ],
+  "textdomain": "video-background",
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "full"
+    },
+    "cId": {
+      "type": "string",
+      "default": ""
+    },
+    "video": {
+      "type": "object",
+      "default": {
+        "id": null,
+        "url": "",
+        "alt": "",
+        "title": ""
+      }
+    },
+    "poster": {
+      "type": "object",
+      "default": {
+        "id": null,
+        "url": "",
+        "alt": "",
+        "title": ""
+      }
+    },
+    "verticalAlign": {
+      "type": "string",
+      "default": "center"
+    },
+    "textAlign": {
+      "type": "string",
+      "default": "center"
+    },
+    "bgOverlay": {
+      "type": "object",
+      "default": {}
+    },
+    "minHeight": {
+      "type": "string",
+      "default": "700px"
+    },
+    "padding": {
+      "type": "object",
+      "default": {
+        "vertical": "20px",
+        "horizontal": "30px"
+      }
+    }
+  },
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ],
+    "html": false
+  },
+  "example": {
+    "attributes": {
+      "preview": true,
+      "sourceType": "link"
+    }
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./view.css",
+  "render": "file:./render.php",
+  "viewScript": "file:./view.js"
+}
