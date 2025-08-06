@@ -4,7 +4,7 @@ Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, video background, background, background video, Gutenberg block
 Requires at least: 6.5+
 Tested up to: 6.8
-Stable tag: 1.0.4
+Stable tag: 1.0.5
 Requires PHP: 7.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -109,6 +109,9 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 
 == Changelog ==
+
+= 1.0.5 - 6 Aug 2025 =
+* Add SDK.
 
 = 1.0.4 - 13 Mar 2025 =
 * Fix video align to center.

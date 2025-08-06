@@ -47,7 +47,9 @@
     },
     "bgOverlay": {
       "type": "object",
-      "default": {}
+      "default": {
+        "color": "#000000b3"
+      }
     },
     "minHeight": {
       "type": "string",
