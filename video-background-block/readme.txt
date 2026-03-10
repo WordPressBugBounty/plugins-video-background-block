@@ -1,32 +1,55 @@
-=== Video Background Block – Use Video as Background in Sections ===
-Contributors: bplugins, abuhayat, charlescormier
-Donate link: https://www.buymeacoffee.com/abuhayat
-Tags: block, video background, background, background video, Gutenberg block
-Requires at least: 6.5+
-Tested up to: 6.9
-Stable tag: 1.0.5
+=== Video Background Block - Use video as background in section. ===
+Contributors: bplugins,abuhayat, shihabshamim
+Donate link: https://gum.co/wpdonate/
+Tags: block, video, video background, background, background video,
+Requires at least: 5.0+
+Tested up to: 6.9.1
+Stable tag: 2.0.0
 Requires PHP: 7.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 
-Use video as background in the section.
+Use video as background in section.
 
 == Description ==
 
-Use video as background in the section.
+Use video as background in section.
 
 
-**[Demos](https://bblockswp.com/demo/video-background)**
+**[Video Background](https://bplugins.com/products/video-background-block/)** | **[Demos](https://bplugins.com/products/video-background-block/#demos)** | **[Pricing](https://bplugins.com/products/video-background-block/pricing/)**
 
 
-= Features =
-- **Background Video**: Use the video as a background.
-- **Fallback**: Use fallback image.
-- **Overlay**: Add overlay color to the video.
+
+= Free Features =
+- **Universal Shortcodes**: Compatible with all page builders.
+- **Background Video**: Use a video as a background.
+- **Fallback**: Use a fallback image.
+- **overlay**: Add overlay color to the video.
 - **Height**: Set the height of the section.
 - **Padding**: Set the padding of the section.
 
+
+= Pro Features =
+- **Everything in Free, plus advanced Pro features**.
+- **Universal Shortcodes**: Compatible with all page builders.
+- **Self‑hosted video**:  (MP4/WebM/OGG) Use a video as a background.
+- **YouTube video**: Use a video as a background.
+- **Vimeo  video**: Use a video as a background.
+- **Responsive video sources (desktop/tablet/mobile)**
+- **Poster image support (desktop/tablet/mobile)**
+- **Poster options**: show/hide, blur + blur amount, dominant color (auto/manual)
+- **YouTube background support + No-Cookie Domain Option**
+- **Vimeo background support**
+- **overlay controls**: color/gradient, opacity, blend mode
+- **overlay patterns**: dots, grid, diagonal + opacity
+- **Animated overlay (subtle motion)**
+- **Noise texture overlay**
+- **Cinematic vignette overlay**
+- **Min height + padding controls (desktop/tablet/mobile)**
+- **Video fit: cover/contain/fill**
+- **Segment loop (start/end)**
+- **Playback Speed Control**
 
 = How to use =
 - First, Install the Video Background Block plugin
@@ -43,7 +66,7 @@ Use video as background in the section.
 
 ### Check out the Parent Plugin of this plugin-
 
-[**B Blocks**](https://bblockswp.com) – A blocks collection and page building tool for Gutenberg.
+[**bBlocks**](https://bblockswp.com) – A blocks collection and page building tool for Gutenberg.
 
 
 ### Check out our other WordPress Plugins-
@@ -104,11 +127,23 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 == Screenshots ==
 
-1. Settings
-2. Video Background
+
+1. Settings 
+2. Settings
+3. Default
+4. Pattern Overlay
+5. Blend Mode 
+6. Animated overlay 
+7. Cinematic Vignette
+8. PlayBack(2x)Speed
 
 
 == Changelog ==
+
+= 2.0.0 - 10 Mar 2026 =
+* Universal Shortcodes: Compatible with all page builders.
+* Added advanced features to the Video Background block.
+* Added a modern dashboard to this plugin.
 
 = 1.0.5 - 6 Aug 2025 =
 * Add SDK.
@@ -128,3 +163,4 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 = 1.0.0 =
 * Initial Release.
+
