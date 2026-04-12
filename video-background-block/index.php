@@ -3,7 +3,7 @@
 /**
  * Plugin Name: Video Background Block
  * Description: Use video as background in section.
- * Version: 2.0.0
+ * Version: 2.0.1
  * Requires at least: 5.8
  * Requires PHP:      7.1
  * Author: bPlugins
@@ -34,7 +34,7 @@ if ( function_exists( 'bvbb_fs' ) ) {
     bvbb_fs()->set_basename( false, __FILE__ );
 } else {
     // Constant
-    define( 'VBB_VERSION', ( isset( $_SERVER['HTTP_HOST'] ) && ('localhost' === $_SERVER['HTTP_HOST'] || 'plugins.local' === $_SERVER['HTTP_HOST']) ? time() : '2.0.0' ) );
+    define( 'VBB_VERSION', ( isset( $_SERVER['HTTP_HOST'] ) && ('localhost' === $_SERVER['HTTP_HOST'] || 'plugins.local' === $_SERVER['HTTP_HOST']) ? time() : '2.0.1' ) );
     define( 'VBB_DIR_URL', plugin_dir_url( __FILE__ ) );
     define( 'VBB_DIR_PATH', plugin_dir_path( __FILE__ ) );
     // ✅ FIX: correct vendor path
@@ -59,7 +59,7 @@ if ( function_exists( 'bvbb_fs' ) ) {
                     'premium_slug'        => 'video-background-block-pro',
                     'type'                => 'plugin',
                     'public_key'          => 'pk_c450cd26984f6b711540a633d4fa1',
-                    'is_premium'          => true,
+                    'is_premium'          => false,
                     'premium_suffix'      => 'Pro',
                     'has_premium_version' => true,
                     'has_addons'          => false,
@@ -87,6 +87,9 @@ if ( function_exists( 'bvbb_fs' ) ) {
     // Required files
     require_once VBB_DIR_PATH . 'includes/GetCSS.php';
     require_once VBB_DIR_PATH . 'includes/adminMenu.php';
+    if ( VIDEO_BACKGROUND_BLOCK_PRO ) {
+        require_once VBB_DIR_PATH . 'includes/LicenseActivation.php';
+    }
     if ( !class_exists( 'VBBPlugin' ) ) {
         class VBBPlugin {
             public function __construct() {

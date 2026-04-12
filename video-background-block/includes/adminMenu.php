@@ -142,6 +142,8 @@ class VBB_Admin_Menu {
 				'version'   => defined( 'VBB_VERSION' ) ? VBB_VERSION : '1.0.0',
 				'isPremium' => function_exists( 'bpvbbIsPremium' ) ? bpvbbIsPremium() : false,
 				'hasPro'    => defined( 'VIDEO_BACKGROUND_BLOCK_PRO' ) ? (bool) VIDEO_BACKGROUND_BLOCK_PRO : false,
+				'licenseActiveNonce' => wp_create_nonce('vbbLicenseActive'),
+
 			] ) ); ?>"
 		></div>
 	<?php }

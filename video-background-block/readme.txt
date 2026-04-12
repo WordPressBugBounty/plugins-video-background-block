@@ -1,10 +1,10 @@
 === Video Background Block - Use video as background in section. ===
-Contributors: bplugins,abuhayat, shihabshamim
+Contributors: bplugins,abuhayat, shihabshamim, freemius
 Donate link: https://gum.co/wpdonate/
 Tags: block, video, video background, background, background video,
 Requires at least: 5.0+
 Tested up to: 6.9.1
-Stable tag: 2.0.0
+Stable tag: 2.0.1
 Requires PHP: 7.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -139,6 +139,9 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 
 == Changelog ==
+
+= 2.0.1 - 12 Apr 2026 =
+* Fix video not playing on frontend.
 
 = 2.0.0 - 10 Mar 2026 =
 * Universal Shortcodes: Compatible with all page builders.

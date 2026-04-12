@@ -311,13 +311,13 @@ $ytNoCookie = ! empty( $ytNoCookie );
 			data-volume='<?php echo esc_attr( (string) $volume ); ?>'
 		>
 			<?php if ( $videoDesktopWebm || $videoTabletWebm || $videoMobileWebm ) : ?>
-				<source type='video/webm' data-src-desktop='<?php echo esc_attr( $videoDesktopWebm ); ?>' data-src-tablet='<?php echo esc_attr( $videoTabletWebm ); ?>' data-src-mobile='<?php echo esc_attr( $videoMobileWebm ); ?>' />
+				<source type='video/webm' src='<?php echo esc_attr( current( array_filter( [ $videoDesktopWebm, $videoTabletWebm, $videoMobileWebm ] ) ) ); ?>' data-src-desktop='<?php echo esc_attr( $videoDesktopWebm ); ?>' data-src-tablet='<?php echo esc_attr( $videoTabletWebm ); ?>' data-src-mobile='<?php echo esc_attr( $videoMobileWebm ); ?>' />
 			<?php endif; ?>
 			<?php if ( $videoDesktopOgg || $videoTabletOgg || $videoMobileOgg ) : ?>
-				<source type='video/ogg' data-src-desktop='<?php echo esc_attr( $videoDesktopOgg ); ?>' data-src-tablet='<?php echo esc_attr( $videoTabletOgg ); ?>' data-src-mobile='<?php echo esc_attr( $videoMobileOgg ); ?>' />
+				<source type='video/ogg' src='<?php echo esc_attr( current( array_filter( [ $videoDesktopOgg, $videoTabletOgg, $videoMobileOgg ] ) ) ); ?>' data-src-desktop='<?php echo esc_attr( $videoDesktopOgg ); ?>' data-src-tablet='<?php echo esc_attr( $videoTabletOgg ); ?>' data-src-mobile='<?php echo esc_attr( $videoMobileOgg ); ?>' />
 			<?php endif; ?>
 			<?php if ( $videoDesktopMp4 || $videoTabletMp4 || $videoMobileMp4 ) : ?>
-				<source type='video/mp4' data-src-desktop='<?php echo esc_attr( $videoDesktopMp4 ); ?>' data-src-tablet='<?php echo esc_attr( $videoTabletMp4 ); ?>' data-src-mobile='<?php echo esc_attr( $videoMobileMp4 ); ?>' />
+				<source type='video/mp4' src='<?php echo esc_attr( current( array_filter( [ $videoDesktopMp4, $videoTabletMp4, $videoMobileMp4 ] ) ) ); ?>' data-src-desktop='<?php echo esc_attr( $videoDesktopMp4 ); ?>' data-src-tablet='<?php echo esc_attr( $videoTabletMp4 ); ?>' data-src-mobile='<?php echo esc_attr( $videoMobileMp4 ); ?>' />
 			<?php endif; ?>
 			Your browser does not support HTML5 video.
 		</video>
