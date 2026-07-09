@@ -11,6 +11,7 @@ class VBB_Admin_Menu {
 		add_action( 'wp_ajax_get_license_status', [ $this, 'getLicenseStatus' ] );
 		add_action( 'wp_ajax_activate_freemius_license', [ $this, 'activateFreemiusLicense' ] );
 		add_action( 'wp_ajax_deactivate_freemius_license', [ $this, 'deactivateFreemiusLicense' ] );
+		add_action( 'wp_ajax_vbbSaveUninstallOption', [ $this, 'vbbSaveUninstallOption' ] );
 		add_shortcode( 'vbb', [ $this, 'onAddShortcode' ] );
 		add_filter( 'manage_vbb_posts_columns', [ $this, 'managePostsColumns' ], 10 );
 		add_action( 'manage_vbb_posts_custom_column', [ $this, 'managePostsCustomColumns' ], 10, 2 );
@@ -140,13 +141,40 @@ class VBB_Admin_Menu {
 			id="video-background-block-dashboard"
 			data-info="<?php echo esc_attr( wp_json_encode( [
 				'version'   => defined( 'VBB_VERSION' ) ? VBB_VERSION : '1.0.0',
-				'isPremium' => function_exists( 'bpvbbIsPremium' ) ? bpvbbIsPremium() : false,
-				'hasPro'    => defined( 'VIDEO_BACKGROUND_BLOCK_PRO' ) ? (bool) VIDEO_BACKGROUND_BLOCK_PRO : false,
 				'licenseActiveNonce' => wp_create_nonce('vbbLicenseActive'),
+				'adminUrl'  => admin_url(),
+				'deleteDataOnUninstall' => (bool) get_option( 'vbbDeleteDataOnUninstall', false ),
+				'uninstallNonce' => wp_create_nonce( 'vbb_save_uninstall_option' ),
 
 			] ) ); ?>"
 		></div>
 	<?php }
+
+	// Persist the dashboard "delete data on uninstall" toggle.
+	// Contract matches bpl-tools/Admin/Settings: reads $_POST['nonce'] and $_POST['enabled'].
+	public function vbbSaveUninstallOption() {
+		$nonce = sanitize_text_field( wp_unslash( $_POST['nonce'] ?? '' ) );
+
+		if ( ! wp_verify_nonce( $nonce, 'vbb_save_uninstall_option' ) ) {
+			wp_send_json_error( [ 'message' => __( 'Invalid security token.', 'video-background' ) ], 403 );
+		}
+
+		if ( ! current_user_can( 'manage_options' ) ) {
+			wp_send_json_error( [ 'message' => __( 'You do not have permission to perform this action.', 'video-background' ) ], 403 );
+		}
+
+		$raw_enabled = isset( $_POST['enabled'] ) ? sanitize_text_field( wp_unslash( $_POST['enabled'] ) ) : '';
+		$enabled     = ( 'true' === $raw_enabled || '1' === $raw_enabled );
+
+		update_option( 'vbbDeleteDataOnUninstall', $enabled );
+
+		wp_send_json_success( [
+			'enabled' => $enabled,
+			'message' => $enabled
+				? __( 'Data deletion enabled.', 'video-background' )
+				: __( 'Data will be preserved on uninstall.', 'video-background' ),
+		] );
+	}
 
 	public function onInit() {
 		register_post_type( $this->post_type, [

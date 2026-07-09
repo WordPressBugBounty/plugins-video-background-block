@@ -31,7 +31,6 @@ class GetCSS{
 				. self::isValidCSS('background-size', $size)
 				. self::isValidCSS('background-repeat', $repeat)
 				. self::isValidCSS('background-attachment', $attachment)
-				. self::isValidCSS('background-repeat', $repeat)
 				. "background-blend-mode: overlay;";
 		} else {
 			$styles = $isSolid ? self::isValidCSS('background', $color) : '';
