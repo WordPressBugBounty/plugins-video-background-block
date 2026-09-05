@@ -1,81 +1,92 @@
-=== Video Background Block – make any section stand out with motion ===
+=== Video Background Block – Add Stunning Video Backgrounds to Any Section ===
 Contributors: bplugins, abuhayat, shihabshamim
-Tags: video background, background video, video, block, gutenberg
-Tested up to: 7.0
-Stable tag: 2.0.2
-Requires PHP: 7.4
-Requires at least: 6.5
 Donate link: https://gum.co/wpdonate/
+Tags: video background, background video, video, block, gutenberg
+Requires at least: 6.5
+Tested up to: 7.1
+Stable tag: 2.0.3
+Requires PHP: 7.4
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Add self-hosted, YouTube, or Vimeo video backgrounds to any section in Gutenberg – with overlays, fallback images, and responsive controls.
+Video Background Block helps you add self-hosted, YouTube, or Vimeo video backgrounds to your site with full overlay, playback, & responsive controls.
 
-== Description ==
+=== Description ===
 
-**Turn plain sections into scroll-stopping hero banners with beautiful video backgrounds – no code, right in the Gutenberg editor.**
+[Video Background Block](https://bplugins.com/products/video-background-block/)  lets you create beautiful sections with background videos directly in the Gutenberg editor. You can use self-hosted videos, YouTube videos, or Vimeo videos to build engaging hero sections, banners, landing pages, and promotional content without writing any code.
 
-[**Video Background**](https://bplugins.com/products/video-background-block/) | [**Live Demos**](https://bplugins.com/products/video-background-block/#demos) | [**Pricing**](https://bplugins.com/products/video-background-block/pricing/)
+[Video Background](https://bplugins.com/products/video-background-block/) | [Live Demos](https://bplugins.com/products/video-background-block/#demos) | [Pricing](https://bplugins.com/products/video-background-block/pricing/)
 
-### Why Video Background Block?
+The plugin is lightweight, easy to use, and works with the Block Editor. It also provides universal shortcodes, so you can display video backgrounds with other page builders if needed.
 
-Static sections are easy to scroll past. **Video Background Block** lets you create beautiful sections with background videos directly in the Gutenberg editor – using self-hosted videos, YouTube, or Vimeo – to build engaging hero sections, banners, landing pages, and promotional content without writing any code.
+Whether you're creating a business website, portfolio, agency site, product landing page, or personal blog, Video Background Block helps you create eye-catching sections that improve the visual experience.
 
-The plugin is lightweight and easy to use: scripts only load when the block is actually used, and simple sidebar-based settings mean there's no technical setup. It also provides universal shortcodes, so you can display video backgrounds in other page builders too.
+=== Key Features – Free Version ===
 
-Whether you're building a business website, portfolio, agency site, product landing page, or personal blog, Video Background Block helps you create eye-catching sections that improve the visual experience.
+The free version includes everything you need to get started with video backgrounds.
 
-### Free Features
+- **Universal Shortcodes** – Use video backgrounds with Gutenberg and other popular page builders.
+- **Background Video** – Display a video as the background of any section.
+- **Fallback Image** – Show an image when the video cannot be loaded.
+- **Overlay Color** – Add a color overlay to improve text readability.
+- **Custom Height** – Set the section height to fit your design.
+- **Padding Controls** – Adjust the spacing around your content.
 
-- **Universal Shortcodes:** Use video backgrounds with Gutenberg and other popular page builders.
-- **Background Video:** Display a video as the background of any section.
-- **Fallback Image:** Show an image when the video cannot be loaded.
-- **Overlay Color:** Add a color overlay to improve text readability.
-- **Custom Height:** Set the section height to fit your design.
-- **Padding Controls:** Adjust the spacing around your content.
+=== Video Background Block Pro – Unlock Premium Features ===
 
-### Pro Version – Unlock Premium Features
+[Upgrade to pro](https://bplugins.com/products/video-background-block/pricing/) to unlock more customization and advanced video background controls.
 
-[**Upgrade to Pro**](https://bplugins.com/products/video-background-block/pricing/) to unlock more customization and advanced video background controls.
+- **Self-hosted Video Support** – Use MP4, WebM, and OGG videos.
+- **YouTube Background Videos** – Display YouTube videos as section backgrounds.
+- **Vimeo Background Videos** – Add Vimeo videos with background playback.
+- **Responsive Video Sources** – Use different videos for desktop, tablet, and mobile devices.
+- **Responsive Poster Images** – Set separate poster images for different screen sizes.
+- **Poster Image Options** – Show or hide the poster image, apply blur effects, or use automatic or custom dominant colors.
+- **YouTube No-Cookie Mode** – Improve user privacy with YouTube's no-cookie domain.
+- **Advanced Overlay Controls** – Customize overlay colors, gradients, opacity, and blend modes.
+- **Overlay Patterns** – Add dot, grid, or diagonal patterns with adjustable opacity.
+- **Animated Overlay Effects** – Create subtle motion for a more dynamic design.
+- **Noise Texture Overlay** – Add texture for a modern visual style.
+- **Cinematic Vignette**– Highlight your content with a soft vignette effect.
+- **Responsive Height and Padding** – Set different minimum heights and spacing for desktop, tablet, and mobile.
+- **Video Fit Options** – Choose Cover, Contain, or Fill based on your layout.
+- **Segment Loop** – Play only a selected portion of the video by setting start and end times.
+- **Playback Speed Control** – Adjust the video playback speed to match your design.
+- **Audio Support** – Add background music to your videos for a more immersive experience.
+- **Display Conditions** – Control where the video background appears on your site.
 
-- **Self-hosted Video Support:** Use MP4, WebM, and OGG videos.
-- **YouTube Background Videos:** Display YouTube videos as section backgrounds.
-- **Vimeo Background Videos:** Add Vimeo videos with background playback.
-- **Responsive Video Sources:** Use different videos for desktop, tablet, and mobile.
-- **Responsive Poster Images:** Set separate poster images for different screen sizes.
-- **Poster Image Options:** Show or hide the poster, apply blur effects, or use automatic or custom dominant colors.
-- **YouTube No-Cookie Mode:** Improve user privacy with YouTube's no-cookie domain.
-- **Advanced Overlay Controls:** Customize overlay colors, gradients, opacity, and blend modes.
-- **Overlay Patterns:** Add dot, grid, or diagonal patterns with adjustable opacity.
-- **Animated Overlay Effects:** Create subtle motion for a more dynamic design.
-- **Noise Texture Overlay:** Add texture for a modern visual style.
-- **Cinematic Vignette:** Highlight your content with a soft vignette effect.
-- **Responsive Height and Padding:** Different minimum heights and spacing per device.
-- **Video Fit Options:** Choose Cover, Contain, or Fill based on your layout.
-- **Segment Loop:** Play only a selected portion of the video with start and end times.
-- **Playback Speed Control:** Adjust the video playback speed to match your design.
+[Try the Pro Version](https://bplugins.com/products/video-background-block/pricing/) – Unlock all premium features today!
 
-### How to Use – Quick Start
+=== How to Use Video Background Block – Quick Start Guide ===
+
+Getting started is easy!
 
 1. Install and activate the **Video Background Block** plugin.
+
 2. Open a page or post in the Gutenberg editor.
-3. Add the **Video Background** block.
+
+3. Add the Video Background block.
+
 4. Select your video source and customize the settings from the right sidebar.
+
 5. Publish or update your page and enjoy your new video background.
 
-[**Live Demos**](https://bplugins.com/products/video-background-block/#demos) | [**Explore Premium Features**](https://bplugins.com/products/video-background-block/pricing/)
+For step-by-step installation instructions, see the **Installation** tab below.
 
-### Use Cases
+[Live Demos](https://bplugins.com/products/video-background-block/#demos) | [Explore Premium Features](https://bplugins.com/products/video-background-block/pricing/)
 
-- **Hero Sections:** Give your homepage an instant, cinematic first impression.
-- **Landing Pages:** Add motion to product and campaign pages that convert.
-- **Agency & Portfolio Sites:** Showcase work with dynamic section backgrounds.
-- **Business Websites:** Modernize banners and promotional sections.
-- **Personal Blogs:** Make key sections memorable with subtle video motion.
+=== Why Use Video Background Block? ===
+
+* Works with **any WordPress theme**, out of the box
+* **Universal Shortcodes** — use it inside any page builder, not just Gutenberg
+* Lightweight — scripts only load when the block is actually used
+* Simple, sidebar-based settings — no technical setup
+
+= Feedback & Support =
 
 Have a feature request, found a bug, or just want to say hello? [Send us your feedback](mailto:support@bplugins.com) — we'd love to hear from you.
 
-### More From bPlugins
+= More From bPlugins =
 
 **Parent Plugin**
 [bBlocks](https://bblockswp.com) – A full blocks collection and page-building toolkit for Gutenberg.
@@ -90,21 +101,20 @@ Have a feature request, found a bug, or just want to say hello? [Send us your fe
 
 == Installation ==
 
-**From your WordPress dashboard (recommended):**
+= Option 1: From the Gutenberg Editor =
 
-1. Go to **Plugins → Add New**.
-2. Search for **"Video Background Block"**.
-3. Click **Install Now**, then **Activate**.
-4. Add the **Video Background** block to any post or page from the block inserter.
+1. Open the WordPress block editor.
+2. Search for **Video Background Block** in the block inserter.
+3. Click to add the **Video Background** block.
 
-**Manual installation:**
+= Option 2: Upload via WordPress Admin =
 
 1. Download the **Video Background Block** plugin as a `.zip` file.
-2. In your WordPress admin, go to **Plugins → Add New** and click **Upload Plugin**.
-3. Select `video-background-block.zip` and click **Install Now**.
+2. In your WordPress admin, go to **Plugins → Add New**.
+3. Click **Upload Plugin**, select `video-background-block.zip`, and click **Install Now**.
 4. Activate the plugin.
 
-**Via FTP:**
+= Option 3: Manual Installation (FTP) =
 
 1. Download and unzip the plugin.
 2. Upload the plugin folder to `/wp-content/plugins/`.
@@ -115,22 +125,6 @@ Have a feature request, found a bug, or just want to say hello? [Send us your fe
 = Is Video Background Block free to use? =
 
 Yes. The core plugin is completely free. A Pro version is available with advanced features like YouTube/Vimeo backgrounds, overlay patterns, and playback controls.
-
-= Which video sources can I use as a background? =
-
-You can use self-hosted videos, YouTube videos, or Vimeo videos. Self-hosted MP4/WebM/OGG support and YouTube/Vimeo backgrounds are part of the Pro version.
-
-= What happens if the video cannot load? =
-
-You can set a fallback image that displays whenever the video cannot be loaded, so your section never looks broken.
-
-= Can I use it outside Gutenberg with other page builders? =
-
-Yes. The plugin provides universal shortcodes, so you can display video backgrounds with other popular page builders as well.
-
-= Will it slow down my site? =
-
-No. The plugin is lightweight, and scripts only load on pages where the block is actually used.
 
 = Will it work with my theme? =
 
@@ -160,6 +154,10 @@ Visit our [support forum](https://wordpress.org/support/plugin/video-background-
 8. Playback speed set to 2x
 
 == Changelog ==
+
+= 2.0.3 - 5 September 2026 =
+* New: Audio support to add background music to videos
+* New: Display conditions to control where the video background appears
 
 = 2.0.2 – 9 July 2026 =
 * Improved: Separated Free and Pro codebases for better performance and maintainability.
