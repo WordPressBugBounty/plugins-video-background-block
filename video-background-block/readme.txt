@@ -9,7 +9,7 @@ Requires PHP: 7.4
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Video Background Block helps you add self-hosted, YouTube, or Vimeo video backgrounds to your site with full overlay, playback, & responsive controls.
+Add self-hosted, YouTube, or Vimeo video backgrounds to your site with flexible overlay, playback, and responsive controls.
 
 === Description ===
 
