@@ -163,7 +163,20 @@ $muted = isset( $muted ) ? (bool) $muted : true;
 $volume = isset( $volume ) ? (float) $volume : 1;
 $audioOnClick = ! empty( $audioOnClick );
 
-$mainSl = "#$id";
+// Sanitize values printed into the inline <style> and overlay style attribute.
+$minHeight = VBB\GetCSS::sanitizeLength( $minHeight, '700px' );
+$minHeightTablet = VBB\GetCSS::sanitizeLength( $minHeightTablet, $minHeight );
+$minHeightMobile = VBB\GetCSS::sanitizeLength( $minHeightMobile, $minHeight );
+$videoFit = VBB\GetCSS::sanitizeKeyword( $videoFit, 'cover' );
+$overlayBlendMode = VBB\GetCSS::sanitizeKeyword( $overlayBlendMode, 'normal' );
+$verticalAlign = VBB\GetCSS::sanitizeKeyword( $verticalAlign, 'center' );
+$textAlign = VBB\GetCSS::sanitizeKeyword( $textAlign, 'center' );
+$posterColor = VBB\GetCSS::sanitizeColor( $posterColor, '#000000' );
+$cssPosterDesktop = VBB\GetCSS::sanitizeUrl( $posterDesktop );
+$cssPosterTablet = VBB\GetCSS::sanitizeUrl( $posterTablet );
+$cssPosterMobile = VBB\GetCSS::sanitizeUrl( $posterMobile );
+
+$mainSl = '#' . sanitize_html_class( $id );
 $styles = "$mainSl{
 	min-height: $minHeight;
 	--vbb-video-fit: $videoFit;
@@ -182,7 +195,7 @@ $styles = "$mainSl{
 }
 $mainSl .vbbPosterLayer{
 	display: $posterDisplay;
-	background-image: url($posterDesktop);
+	background-image: url($cssPosterDesktop);
 	background-color: var(--vbb-poster-color, $posterColor);
 	background-position: {$focusX}% {$focusY}%;
 	filter: blur({$posterBlur}px);
@@ -209,7 +222,7 @@ $mainSl .vbbVideoOverlay{
 		padding: " . VBB\GetCSS::getSpaceCSS( $resolvedPaddingTablet ) . ";
 	}
 	$mainSl .vbbPosterLayer{
-		background-image: url(" . ( $posterTablet ?: $posterDesktop ) . ");
+		background-image: url(" . ( $cssPosterTablet ?: $cssPosterDesktop ) . ");
 	}
 }
 @media (max-width: 767px){
@@ -221,7 +234,7 @@ $mainSl .vbbVideoOverlay{
 		padding: " . VBB\GetCSS::getSpaceCSS( $resolvedPaddingMobile ) . ";
 	}
 	$mainSl .vbbPosterLayer{
-		background-image: url(" . ( $posterMobile ?: ( $posterTablet ?: $posterDesktop ) ) . ");
+		background-image: url(" . ( $cssPosterMobile ?: ( $cssPosterTablet ?: $cssPosterDesktop ) ) . ");
 	}
 }";
 

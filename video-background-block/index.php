@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Video Background Block
  * Description: Use video as background in section.
- * Version: 2.0.3
+ * Version: 2.0.4
  * Requires at least: 6.5
  * Requires PHP:      7.4
  * Author: bPlugins
@@ -45,7 +45,7 @@ if ( function_exists( 'bvbb_fs' ) ) {
 			'plugins.local' === $_SERVER['HTTP_HOST']
 		)
 			? time()
-			: '2.0.3'
+			: '2.0.4'
 	);
 
 	define( 'VBB_DIR_URL', plugin_dir_url( __FILE__ ) );
@@ -126,8 +126,8 @@ if ( function_exists( 'bvbb_fs' ) ) {
 		}
 
 		function defaultContent( $content, $post ) {
-			if ( 'page' === $post->post_type && isset( $_GET['content'] ) ) {
-				return wp_unslash( $_GET['content'] );
+			if ( 'page' === $post->post_type && isset( $_GET['content'] ) && is_string( $_GET['content'] ) && current_user_can( 'edit_pages' ) ) {
+				return wp_kses_post( wp_unslash( $_GET['content'] ) );
 			}
 			return $content;
 		}
