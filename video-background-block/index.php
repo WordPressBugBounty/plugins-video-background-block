@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Video Background Block
  * Description: Use video as background in section.
- * Version: 2.0.4
+ * Version: 2.0.5
  * Requires at least: 6.5
  * Requires PHP:      7.4
  * Author: bPlugins
@@ -45,7 +45,7 @@ if ( function_exists( 'bvbb_fs' ) ) {
 			'plugins.local' === $_SERVER['HTTP_HOST']
 		)
 			? time()
-			: '2.0.4'
+			: '2.0.5'
 	);
 
 	define( 'VBB_DIR_URL', plugin_dir_url( __FILE__ ) );
@@ -100,7 +100,8 @@ if ( function_exists( 'bvbb_fs' ) ) {
 
 	// Required files
 	require_once VBB_DIR_PATH . 'includes/GetCSS.php';
-	 require_once VBB_DIR_PATH . 'includes/adminMenu.php';
+	require_once VBB_DIR_PATH . 'includes/adminMenu.php';
+	require_once VBB_DIR_PATH . 'includes/class-vbb-promo-banner.php';
 
 
 	if ( ! class_exists( 'VBBPlugin' ) ) {
@@ -134,11 +135,18 @@ if ( function_exists( 'bvbb_fs' ) ) {
 
 		function pluginActionLinks( $links, $file ) {
 			if( plugin_basename( __FILE__ ) === $file ) {
-				$goProLink = admin_url( 'edit.php?post_type=apb&page=video-background-block-dashboard#/pricing' );
-				$helpDemosLink = admin_url( 'edit.php?post_type=apb&page=video-background-block-dashboard' );
+				$goProLink = 'https://bplugins.com/products/video-background-block/pricing/?utm_source=admin&utm_medium=plugins&utm_campaign=bfcm2026';
 
-					$links['go-pro'] = sprintf( '<a href="%s" style="%s">%s</a>', $goProLink, 'color:#146ef5;font-weight:bold', __( 'Go Pro', 'video-background-block-dashboard' ) );
-					$links['help-and-demos'] = sprintf( '<a href="%s" style="%s">%s</a>', $helpDemosLink, 'color:#FF7A00;font-weight:bold', __( 'Help & Demos', 'video-background-block-dashboard' ) );
+				$linkText = ( current_time( 'Y-m-d' ) > '2026-12-05' )
+					? __( 'Upgrade to Pro', 'video-background' )
+					: __( 'Upgrade to Pro & Save Up to 45% This Black Friday!', 'video-background' );
+
+				$links['help-and-demos'] = sprintf(
+					'<a href="%s" target="_blank" rel="noopener noreferrer" style="%s">%s</a>',
+					esc_url( $goProLink ),
+					'color:#d63638;font-weight:bold;',
+					$linkText
+				);
 			}
  
 			return $links;

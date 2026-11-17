@@ -4,12 +4,12 @@ Donate link: https://gum.co/wpdonate/
 Tags: video background, background video, video, block, gutenberg
 Requires at least: 6.5
 Tested up to: 7.1
-Stable tag: 2.0.4
+Stable tag: 2.0.5
 Requires PHP: 7.4
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Video Background Block helps you add self-hosted, YouTube, or Vimeo video backgrounds to your site with full overlay, playback, & responsive controls.
+Add self-hosted, YouTube, or Vimeo video backgrounds with customizable overlays and responsive controls.
 
 === Description ===
 
@@ -155,6 +155,8 @@ Visit our [support forum](https://wordpress.org/support/plugin/video-background-
 
 == Changelog ==
 
+= 2.0.5 =
+* Added Black Friday & Cyber Monday (BFCM) promotional banner.
 
 = 2.0.4 - 28 October 2026 =
 * Security: Fixed a stored XSS issue in prefilled page content and improved sanitization of block style attributes.
