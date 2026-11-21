@@ -4,7 +4,7 @@ Donate link: https://gum.co/wpdonate/
 Tags: video background, background video, video, block, gutenberg
 Requires at least: 6.5
 Tested up to: 7.1
-Stable tag: 2.0.5
+Stable tag: 3.0.0
 Requires PHP: 7.4
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -31,6 +31,14 @@ The free version includes everything you need to get started with video backgrou
 - **Overlay Color** – Add a color overlay to improve text readability.
 - **Custom Height** – Set the section height to fit your design.
 - **Padding Controls** – Adjust the spacing around your content.
+- **Template Library** – Import ready-made video background sections with one click (free templates included).
+- **Layer Entry Animations** – Animate any block inside the section with basic entry effects and "Start after" delay presets.
+- **Loop Animations** – Add Pulse or Bounce loops with Slow, Normal, or Fast speed.
+- **Hover Effects** – Grow, Lift, or Fade blocks on hover with adjustable amount and speed.
+- **Click Actions** – Open a link or smoothly scroll to a section when a block is clicked.
+- **Layer Typography** – Pick Google Fonts for blocks inside the section.
+- **Fit to Content & Absolute Position** – Size layers to their content or place them freely with X/Y offsets and z-index.
+- **Responsive Layer Controls** – Hide layers or turn off animations on desktop, tablet, or mobile.
 
 === Video Background Block Pro – Unlock Premium Features ===
 
@@ -54,6 +62,14 @@ The free version includes everything you need to get started with video backgrou
 - **Playback Speed Control** – Adjust the video playback speed to match your design.
 - **Audio Support** – Add background music to your videos for a more immersive experience.
 - **Display Conditions** – Control where the video background appears on your site.
+- **Pro Templates** – Access the full collection of premium video background templates.
+- **Advanced Entry Effects** – Rotate-in, Spin-in, Flip-in, and more entry animations.
+- **Advanced Loop Effects** – Float, Flash, Shake, and Swing loops with loop count control.
+- **Fine-tune Timing** – Set exact animation delay, duration, and distance.
+- **Replay Modes** – Play animations every time they scroll into view, or repeat them.
+- **Word by Word Animation** – Reveal headings and text one word at a time.
+- **Number Counter** – Animate numbers counting up when they come into view.
+- **Hover Colors** – Change text and background colors on hover.
 
 [Try the Pro Version](https://bplugins.com/products/video-background-block/pricing/) – Unlock all premium features today!
 
@@ -152,8 +168,84 @@ Visit our [support forum](https://wordpress.org/support/plugin/video-background-
 6. Animated overlay effect
 7. Cinematic vignette effect
 8. Playback speed set to 2x
+9. Mobile App Launch
+10. Wearable Health Tracker
+11. Showroom Performance GT Collection
+12. Electric Vehicle Charging
+13. Motorcycle Tours Custom Bikes
+14. General Contractor Builders
+15. Global Company Introduction
+16. Executive Leadership Culture
+17. Product Launch Countdown
+18. Grand Opening Celebration
+19. General Contractor Builders 2
+20. Manufacturing Metal Fabrication
+21. Studio Brand Type Design
+22. Fine Artist Painter
+23. Keynote Speaker Coach
+24. Full Service Studio
+25. Performance Marketing
+26. Seasonal Online Sale
+27. Fine Jewelry Collection
+28. Luxury Watch Product Launch
+29. Online Courses Learn Without Limits
+30. University Admissions
+31. Kids STEM Coding Camp
+32. Podcast Show New Episodes
+33. Film Production Company
+34. eSports Gaming Community
+35. Business Leadership Summit
+36. Music Festival Line-Up
+37. Lifestyle New Season Collection
+38. Runway Collection Launch
+39. Clean Beauty Skincare Brand
+40. Wealth Investment Management
+41. Crypto Exchange Fintech App
+42. Accounting Tax Advisory
+43. Gym Strength and Conditioning Club
+44. Yoga Meditation Studio
+45. Boxing Combat Club
+46. Day Spa Skin Clinic
+47. Family Medical Clinic
+48. Medical Research Laboratory
+49. Specialist Hospital Imaging
+50. Boutique Hotel Suites
+51. Beach Resort Spa
+52. Renewable Solar Energy
+53. Forest Conservation Trust
+54. Ocean Reef Protection
+55. Mental Health Charity
+56. Community Food Bank Donation
+57. Portrait Fashion Studio
+58. Wedding Brand Film
+59. Luxury Property Showcase
+60. Luxury Villa Listing
+61. Design Planning Studio
+62. Elegant Fine Dining
+63. Specialty Coffee House
+64. Artisan Bakery Patisserie
+65. Wine Bar Tasting Room
+66. SaaS AI Analytics Platform
+67. Cloud Platform Showcase
+68. Cybersecurity Solutions
+69. Idea to Launch Studio
+70. Discover the Mediterranean
+71. Deep Tech Innovation Lab
+72. Tropical Island Escape
+73. Adventure Trekking Tours
+74. Luxury Wedding Planning
 
 == Changelog ==
+
+= 3.0.0 - 19 November 2026 =
+* New: Template Library – import ready-made video background sections from the editor header (Free & Pro templates).
+* New: Layer system – style and animate any block inside a Video Background section.
+* New: Entry animations with "Start after" delay presets and live preview.
+* New: Loop animations (Pulse, Bounce) with speed control.
+* New: Hover effects (Grow, Lift, Fade) and click actions (open a link, scroll to a section).
+* New: Layer Typography with Google Fonts, Fit to Content, Absolute Position and z-index controls.
+* New: Responsive layer options – hide layers or disable animations per device.
+* New (Pro): Advanced entry/loop effects, fine-tune timing, Word by Word animation, Number Counter, hover colors and replay modes.
 
 = 2.0.5 =
 * Added Black Friday & Cyber Monday (BFCM) promotional banner.
@@ -196,6 +288,9 @@ Visit our [support forum](https://wordpress.org/support/plugin/video-background-
 * Initial release.
 
 == Upgrade Notice ==
+
+= 3.0.0 =
+Major update introducing the Template Library and a new layer system for animating and styling blocks inside video background sections. Recommended for all users.
 
 = 2.0.2 =
 Free and Pro code has been separated for better performance. No action needed — your existing settings are preserved.

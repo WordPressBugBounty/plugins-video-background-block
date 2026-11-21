@@ -140,7 +140,7 @@ class VBB_Admin_Menu {
 		<div
 			id="video-background-block-dashboard"
 			data-info="<?php echo esc_attr( wp_json_encode( [
-				'version'   => defined( 'VBB_VERSION' ) ? VBB_VERSION : '1.0.0',
+				'version'   => ( function_exists( 'get_plugin_data' ) ? get_plugin_data( dirname( __DIR__ ) . '/index.php', false, false )['Version'] : '' ) ?: '3.0.0',
 				'licenseActiveNonce' => wp_create_nonce('vbbLicenseActive'),
 				'adminUrl'  => admin_url(),
 				'deleteDataOnUninstall' => (bool) get_option( 'vbbDeleteDataOnUninstall', false ),

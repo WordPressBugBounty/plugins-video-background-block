@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Video Background Block
  * Description: Use video as background in section.
- * Version: 2.0.5
+ * Version: 3.0.0
  * Requires at least: 6.5
  * Requires PHP:      7.4
  * Author: bPlugins
@@ -45,7 +45,7 @@ if ( function_exists( 'bvbb_fs' ) ) {
 			'plugins.local' === $_SERVER['HTTP_HOST']
 		)
 			? time()
-			: '2.0.5'
+			: '3.0.0'
 	);
 
 	define( 'VBB_DIR_URL', plugin_dir_url( __FILE__ ) );
@@ -100,6 +100,8 @@ if ( function_exists( 'bvbb_fs' ) ) {
 
 	// Required files
 	require_once VBB_DIR_PATH . 'includes/GetCSS.php';
+	require_once VBB_DIR_PATH . 'includes/Layers.php';
+	require_once VBB_DIR_PATH . 'includes/Templates/Templates.php';
 	require_once VBB_DIR_PATH . 'includes/adminMenu.php';
 	require_once VBB_DIR_PATH . 'includes/class-vbb-promo-banner.php';
 
@@ -108,6 +110,7 @@ if ( function_exists( 'bvbb_fs' ) ) {
 		class VBBPlugin {
 			public function __construct() {
 				add_action( 'init', array( $this, 'onInit' ) );
+				add_action( 'enqueue_block_editor_assets', array( $this, 'enqueueTemplateLibrary' ) );
 
 				add_filter( 'plugin_action_links', [$this, 'pluginActionLinks'], 10, 2 );
 			add_filter( 'default_title', [$this, 'defaultTitle'], 10, 2 );
@@ -117,6 +120,44 @@ if ( function_exists( 'bvbb_fs' ) ) {
 
 			public function onInit() {
 				register_block_type( __DIR__ . '/build' );
+			}
+
+			/** "Video Background Templates" header button (src/template-library, includes/Templates/Templates.php). */
+			public function enqueueTemplateLibrary() {
+				if ( ! current_user_can( 'edit_posts' ) ) {
+					return;
+				}
+
+				$assetFile = VBB_DIR_PATH . 'build/template-library.asset.php';
+
+				if ( ! file_exists( $assetFile ) ) {
+					return;
+				}
+
+				$asset = require $assetFile;
+
+				wp_enqueue_script(
+					'vbb-template-library',
+					VBB_DIR_URL . 'build/template-library.js',
+					array_merge( $asset['dependencies'], [ 'wp-util' ] ),
+					$asset['version'],
+					false
+				);
+
+				wp_enqueue_style(
+					'vbb-template-library',
+					VBB_DIR_URL . 'build/template-library.css',
+					[],
+					$asset['version']
+				);
+
+				wp_set_script_translations( 'vbb-template-library', 'video-background', VBB_DIR_PATH . 'languages' );
+
+				wp_add_inline_script(
+					'vbb-template-library',
+					'const vbbtemplatenonce = "' . esc_js( wp_create_nonce( 'vbb_template' ) ) . '";',
+					'before'
+				);
 			}
 		
 			function defaultTitle( $title, $post ) {

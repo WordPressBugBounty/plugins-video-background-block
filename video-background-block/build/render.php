@@ -3,6 +3,11 @@ $id = wp_unique_id( 'vbbVideoBG-' );
 
 extract( $attributes );
 
+// Google fonts picked in the Typography panel of blocks inside this section (src/Layers).
+if ( isset( $block ) && class_exists( 'VBB\Layers' ) ) {
+	VBB\Layers::enqueueFonts( $block );
+}
+
 if ( ! function_exists( 'vbb_has_space_value' ) ) {
 	function vbb_has_space_value( $space ) {
 		if ( empty( $space ) || ! is_array( $space ) ) {
@@ -171,6 +176,8 @@ $videoFit = VBB\GetCSS::sanitizeKeyword( $videoFit, 'cover' );
 $overlayBlendMode = VBB\GetCSS::sanitizeKeyword( $overlayBlendMode, 'normal' );
 $verticalAlign = VBB\GetCSS::sanitizeKeyword( $verticalAlign, 'center' );
 $textAlign = VBB\GetCSS::sanitizeKeyword( $textAlign, 'center' );
+// Side margins that line a layer "Fit to Content" block up with the text alignment (src/Layers/style.scss).
+$fitMargins = [ 'left' => [ '0', 'auto' ], 'right' => [ 'auto', '0' ] ][ (string) $textAlign ] ?? [ 'auto', 'auto' ];
 $posterColor = VBB\GetCSS::sanitizeColor( $posterColor, '#000000' );
 $cssPosterDesktop = VBB\GetCSS::sanitizeUrl( $posterDesktop );
 $cssPosterTablet = VBB\GetCSS::sanitizeUrl( $posterTablet );
@@ -207,6 +214,8 @@ $mainSl .vbbVideoPlayer{
 $mainSl .vbbVideoContent{
 	justify-content: $verticalAlign;
 	text-align: $textAlign;
+	--vbb-fit-ml: {$fitMargins[0]};
+	--vbb-fit-mr: {$fitMargins[1]};
 	min-height: $minHeight;
 	padding: " . VBB\GetCSS::getSpaceCSS( $padding ) . ";
 }
@@ -367,7 +376,7 @@ $ytNoCookie = ! empty( $ytNoCookie );
 	<div class='vbbVideoOverlay' style='<?php echo $overlayStyle; ?>'></div>
 
 	<div class='vbbVideoContent'>
-		<?php echo wp_kses_post( $content ); ?>
+		<?php echo wp_kses_post( class_exists( 'VBB\Layers' ) ? VBB\Layers::prepareContent( $content ) : $content ); ?>
 	</div>
 </div>
 
